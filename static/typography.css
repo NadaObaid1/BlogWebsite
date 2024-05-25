@@ -1,0 +1,16 @@
+/* Typography Styles */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+}
+p {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+a {
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}

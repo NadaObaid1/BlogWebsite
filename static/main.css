@@ -1,0 +1,41 @@
+@import url('./typography.css');
+@import url('./colors.css');
+@import url('./layout.css');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+/* Navigation */
+nav {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.home{
+    text-decoration: underline;
+    color: #000000;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+/* Buttons */
+.button {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: #53a8b6;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
