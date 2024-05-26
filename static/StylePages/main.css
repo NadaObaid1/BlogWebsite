@@ -1,12 +1,11 @@
-@import url('./typography.css');
-@import url('./colors.css');
-@import url('./layout.css');
+@import url('../StylePages/typography.css');
+@import url('../StylePages/colors.css');
+@import url('../StylePages/layout.css');
 
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
     color: var(--text-color);
 }
 /* Navigation */
@@ -22,7 +21,7 @@ nav ul {
 }
 .home{
     text-decoration: underline;
-    color: #000000;
+    color: var(--text-color);
 }
 nav ul li a {
     text-decoration: none;
@@ -33,9 +32,30 @@ nav ul li a {
 .button {
     padding: 10px 20px;
     background-color: var(--button-color);
-    color: #53a8b6;
+    color: var(--background-color);
     text-decoration: none;
     border-radius: 5px;
     display: flex;
     justify-content: center;
 }
+/* Article styles */
+.author-details h3{
+    margin-right: 200px;
+}
+.author-info .avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.social-sharing{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 10px;
+}
+.social-sharing a{
+    text-decoration: none;
+    font-size: 15px;
+    color:   var(--text-color);
+}
+
