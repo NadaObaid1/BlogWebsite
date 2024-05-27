@@ -1,0 +1,121 @@
+.blog-post {
+    width: 1000px;
+    margin: auto;
+}
+
+.blog-post-Header {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.author-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--background-color);
+}
+
+.author-details h3 {
+    margin-right: 200px;
+}
+
+.author-info #avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.social-sharing {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    gap: 2px;
+}
+
+.social-sharing a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#back-to-home{
+    background-color: navajowhite;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+
+/***************Media Queries**********************/
+@media (max-width: 1200px) {
+    .blog-post {
+        width: 90%; 
+        margin: 0 auto;
+    }
+
+    .author-info {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .author-details h3 {
+        margin-right: 0;
+    }
+
+    .author-info #avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-sharing {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        width: 100%;
+    }
+
+    .author-info #avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-sharing {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .author-info {
+        padding: 10px;
+    }
+
+    .author-info #avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-sharing a {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    blockquote {
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+}

@@ -1,61 +1,121 @@
 @import url('../StylePages/typography.css');
 @import url('../StylePages/colors.css');
+@import url('../StylePages/BlogPost.css');
 @import url('../StylePages/layout.css');
 
-/* General Styles */
+/* **************General Styles*********************/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: var(--text-color);
 }
-/* Navigation */
-nav {
+
+.header, .footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Homepage{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/****************Navigation*************************/
+.navbar {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
-nav ul {
+.navbar .nav-list {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
 }
-.home{
+.navbar .nav-list .home{
     text-decoration: underline;
     color: var(--text-color);
 }
-nav ul li a {
+.navbar .nav-list li a {
     text-decoration: none;
     color: var(--link-color);
     font-weight: bold;
 }
-/* Buttons */
-.button {
+
+/***************figcaption*************************/
+figcaption{
+    text-align: center;
+}
+
+/***************More-detalis***********************/
+.More-detalis {
     padding: 10px 20px;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: var(--link-color);
     text-decoration: none;
     border-radius: 5px;
     display: flex;
     justify-content: center;
 }
-/* Article styles */
-.author-details h3{
-    margin-right: 200px;
+
+/***************Media Queries**********************/
+@media (max-width: 1200px) {
+    .Homepage {
+        width: 90%; 
+        margin: 0 auto;
+    }
+    p{
+        font-size: 18px;
+    }
+    .navbar .nav-list {
+        flex-direction: row;
+    }
+
+    .navbar .nav-list li {
+        margin-bottom: 10px;
+    }
+
+    .More-detalis {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
-.author-info .avatar {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .navbar .nav-list {
+        flex-direction: row;
+    }
+
+    .Homepage {
+        width: 90%; 
+        padding: 0 10px; 
+    }
+
+    .More-detalis {
+        width: 70%; 
+        padding: 15px 10px;
+    }
 }
-.social-sharing{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    gap: 10px;
-}
-.social-sharing a{
-    text-decoration: none;
-    font-size: 15px;
-    color:   var(--text-color);
+
+@media (max-width: 480px) {
+    .Homepage{
+        width: 90%;
+    }
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .navbar .nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .More-detalis {
+        width: 80%;   
+    }
 }
 

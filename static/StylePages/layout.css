@@ -1,7 +1,4 @@
-header, main, footer {
-    width: 1200px;
-    margin: 0 auto;
-}
+/***************Pages layout***************/
 .blog {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* عمودين */
@@ -14,12 +11,12 @@ header, main, footer {
     border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 20px;
-    background-color: #bbe4e9;
+    background-color: var(--background-color);
 }
 
 .blog-card img {
-    width: 60%;
-    height: 300px; 
+    width: 100%;
+    height: 400px; 
     margin-bottom: 10px;
     margin-left: auto; 
     margin-right: auto;
@@ -30,20 +27,28 @@ header, main, footer {
     gap: 20px;
 }
 
-/* Responsive styles */
+
+/***************Media Queries**********************/
 @media (max-width: 1200px) {
-    header, main, footer {
-        width: 100%;
+    .blog {
+        grid-template-columns: repeat(2, 1fr); /* عمودين */
+    }
+
+    .author-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .author-info #avatar {
+        width: 200px;
+        height: 200px;
     }
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: row;
-    }
-    
     .blog {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* عمود واحد */
     }
 
     .author-info {
@@ -51,24 +56,32 @@ header, main, footer {
         align-items: center;
     }
 
-    .author-info .avatar {
-        margin-bottom: 10px;
+    .author-info #avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .blog-card img {
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
-    .blog-card img {
-        width: 100%;
-        height: auto;
+    .blog {
+        grid-template-columns: 1fr; /* عمود واحد */
     }
 
     .author-info {
         flex-direction: column;
-        align-items: center;
+        padding: 10px;
     }
 
-    .author-info .avatar {
-        width: 80px;
-        height: 80px;
+    .author-info #avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .blog-card img {
+        height: 200px;
     }
 }

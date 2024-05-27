@@ -7,45 +7,34 @@
     <link rel="stylesheet" href="../StylePages/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="home">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <header>
+        <article class="blog-post">
+            <header class="blog-post-Header">
                 <h1>my personal blog</h1>
-            </header>
-            <section>
                 <p>This is my personal blog.</p>
-            </section>
-            <section>
-                <div class="author-info">
-                    <img src="../Images/nada.jpg" alt="Author's picture" class="avatar">
+            </header>
+            <section class="author-info">
+                    <figure> 
+                        <img src="../Images/nada.jpg" alt="Author's picture" id="avatar">
+                        <figcaption>Fig.1 - Nada, Jenin, Palestine.</figcaption>
+                    </figure>
                     <div class="author-details">
-                        <h3>nada obaid</h3>
+                        <h3><em><u>nada obaid</u></em></h3>
+                        <blockquote>
                         <p>I am Nada Obaid from the city of Jenin, Graduate from Palestine Technical University, Kadoorie
                             Interested in the field of frontend,
                             I took many courses in the field of programming, and I am happy to be with Spark now.</p>
                         <p>My Current Job Graduate from Palestine Technical University, Kadoorie</p>
+                        </blockquote>
                     </div>
-                </div>
-                <div class="social-sharing">
+            </section>
+            <footer class="social-sharing">
                     <a href="#">Twitter</a>
                     <a href="#">Facebook</a>
                     <a href="#">LinkedIn</a>
-                </div>
-            </section>
+                    <button class="button">
+                        <a href="../../index.html" id="back-to-home">Back to home page</a>
+                    </button>
+            </footer>
         </article>
-    </main>
-    <footer>
-        <p>&copy; 2024 Nada Obaid</p>
-    </footer>
 </body>
 </html>
